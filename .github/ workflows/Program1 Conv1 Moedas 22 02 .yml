@@ -1,0 +1,111 @@
+programa conversao
+{
+	
+	funcao inicio()
+	{
+		real valorTotal, dolar, euro, libras
+		caracter atualizar
+		
+		dolar = 4.38
+		euro = 4.76
+		libras = 5.69
+
+		escreva ("Este programa fara a conversão de valores do real para outras moedas com os valores respectivos: \n" )
+
+//PARA O DOLAR
+		faca
+		{
+			escreva (dolar, "-Dolares \nGostaria de atualizar esse valor (s/n)?\n")
+			leia (atualizar)
+			limpa ()
+		}
+		enquanto
+		(
+			atualizar != 's' e atualizar != 'n'
+		)
+			
+		
+		se
+		(
+			atualizar == 's'
+		)
+		{
+			escreva ("Qual o novo valor do dolar (digite usando o ponto)? \n")
+			leia (dolar)
+		}
+		senao
+		{
+			escreva ("Certo!\n ")
+		}
+
+
+//PARA O EURO
+//
+//
+		faca
+		{
+			escreva (euro, "-Euros \nGostaria de atualizar esse valor (s/n)?\n")
+			leia (atualizar)
+			limpa ()
+		}
+		enquanto
+		(
+			atualizar != 's' e atualizar != 'n'
+		)
+			
+		
+		se
+		(
+			atualizar == 's'
+		)
+		{
+			escreva ("Qual o novo valor do Euro (digite usando o ponto)? \n")
+			leia (euro)
+			limpa ()
+		}
+		senao
+		{
+			escreva ("Certo!\n ")
+		}
+
+
+//PARA LIBRAS
+//
+//
+		faca
+		{
+			escreva (libras, "-Libras Esterlinas \nGostaria de atualizar esse valor (s/n)?\n")
+			leia (atualizar)
+			limpa ()
+		}
+		enquanto
+		(
+			atualizar != 's' e atualizar != 'n'
+		)
+			
+		
+		se
+		(
+			atualizar == 's'
+		)
+		{
+			escreva ("Qual o novo valor do Libra (digite usando o ponto)? \n")
+			leia (libras)
+		}
+		senao
+		{
+			escreva ("Certo!\n ")
+		}
+		
+		
+		escreva ("Qual o valor em real você tem (use ponto) ")
+		leia (valorTotal)
+		limpa ()
+						
+		escreva (valorTotal / dolar, "-Dolares \n")
+		escreva (valorTotal / euro, "-Euros \n")
+		escreva (valorTotal / libras, "-Libras Esterlinas \n")
+		
+		
+	}
+}
