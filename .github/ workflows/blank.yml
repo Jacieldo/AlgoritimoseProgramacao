@@ -1,0 +1,77 @@
+programa SalImposto
+{
+	
+	funcao inicio()
+	{
+		real salMin, hora, horaExtra, salReceber, imposto, saliquido
+		inteiro depend
+
+		escreva ("Digite o valor do seu Salário Mínimo: ")
+		leia (salMin)
+		escreva ("Quantos dependentes tem o funcionário: ")
+		leia (depend)
+		escreva ("Quantas horas Extras foram trabalhadas: ")
+		leia (horaExtra)
+		escreva ("Quantas horas foram trabalhadas: ")
+		leia (hora)	
+
+		salReceber = hora * (salMin / 5)
+		salReceber = depend * 32 + salReceber
+		horaExtra = (salMin / 5) * 1.5 * horaExtra
+		salReceber = salReceber + horaExtra 
+		limpa ()
+		imposto = salReceber
+		escreva ("Seu Salário Bruto é de R$ ", salReceber, "\n")
+
+	
+		se
+		(
+			salReceber > 0 e salReceber < 200
+		)
+		{
+			escreva ("PARABÉNS, você esta isento de impostos! \n")
+		}
+		senao
+			se
+			(
+				salReceber >= 200 e salReceber <= 500
+			)
+			{
+				escreva ("\nSalário entre R$ 200,00 e R$ 500,00 terá imposto retido de 10% \n")
+				escreva ("Ou seja, será descontado R$ ", imposto = salReceber * 0.1, " do seu salário\n")		
+			}
+			senao
+				se
+				(
+					salReceber > 500
+				)
+				{
+					escreva ("\nSalário superior a R$ 500,00 terá imposto retido de 20% \n")
+					escreva ("Ou seja, será descontado R$ ", imposto = salReceber * 0.2, " do seu salário\n")
+						
+				}
+				senao
+				{
+					escreva ("Com valor negativo? Não é possível.")
+					escreva ("Ou você é doido ou está sendo enganado!!!\n")
+				}
+
+		
+		escreva ("Seu salário líquido (bruto-imposto) é de R$ ", saliquido = salReceber - imposto, "\n")
+
+		se
+		(
+			saliquido > 0 e saliquido <= 350
+		)
+		{
+			escreva ("Vecê recebera uma gratificação de R$ 100,00\n")
+			escreva ("\tTOTAL=",saliquido + 100)
+		}
+		senao
+		{
+			escreva ("Vecê recebera uma gratificação de R$ 50,00\n")
+			escreva ("\tTOTAL=",saliquido + 50)
+		}
+					
+	}
+}
