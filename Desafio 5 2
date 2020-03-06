@@ -1,0 +1,32 @@
+peso = float(input("Digite seu peso em quilos: "))
+altura = float(input(f"Digite seua altura em metros: "))
+
+imc = (peso / (altura ** 2))
+
+if imc < 15:
+    print(f"Seu IMC é:  {imc} Você esta extremamente abaixo do peso!")
+if imc >= 15 and imc < 16:
+    print(f"Seu IMC é: ", imc, "Você esta gravimente abaixo do peso!")
+if imc >= 16 and imc < 18.5:
+    print(f"Seu IMC é:, {imc} Você esta abaixo do peso ideal!")
+if imc >= 18.5 and imc < 25:
+    print(f"Seu IMC é: {imc} Você esta na faixa de peso IDEAL. PARABÉNS!")
+if imc >= 25 and imc < 30:
+    print(f"Seu IMC é: {imc} Você esta com sobrepeso!")
+if imc >= 30 and imc < 35:
+    print(f"Seu IMC é: {imc} Você tem obesidade GRAU I")
+if imc >= 35 and imc < 40:
+    print(f"Seu IMC é: {imc} Você tem obesidade GRAU II")
+else:
+    if imc > 40:
+        print(f"Seu IMC é: {imc} Você é um OBESO MÓRBIDO!")
+
+if imc < 18.5:
+    pesoIdeal = altura ** 2 * 18.5
+    print(f"Você esta {pesoIdeal - peso} abaixo do peso MÍNIMO IDEAL que é {pesoIdeal}")
+if imc > 25:
+    pesoIdeal = altura **2 *25
+    print(f"Você esta {peso - pesoIdeal} acima do seu peso MÁXIMO IDEAL que é {pesoIdeal}")
+else:
+   if imc >= 18.5 and imc < 25
+       print("PARABÉNS! Você esta dentro dos parametros IDEAIS!")
